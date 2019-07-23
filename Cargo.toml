@@ -1,0 +1,22 @@
+[package]
+name = "bitcoin-spring"
+version = "0.1.0"
+authors = ["Harry L. Barber"]
+edition = "2018"
+
+[dependencies]
+bitcoin-zmq = { git = "https://github.com/hlb8122/rust-bitcoin-zmq.git" }
+bus_queue = "*"
+http = "*"
+bytes = "*"
+tokio = "*"
+tower-grpc = { version = "*",  features = ["tower-hyper"] }
+tower-service = "*"
+tower-hyper = "*"
+tower-util = "*"
+futures = "*"
+regex = "*"
+prost = "*"
+
+[build-dependencies]
+tower-grpc-build = { version = "*",  features = ["tower-hyper"] }

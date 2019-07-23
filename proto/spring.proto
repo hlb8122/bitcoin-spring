@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spring;
+
+service Subscriber {
+  rpc Subscribe(Regex) returns (stream Matches) {}
+}
+
+message Regex {
+    string regex = 1;
+}
+
+message Matches {
+    repeated bytes matches = 1;
+}
+

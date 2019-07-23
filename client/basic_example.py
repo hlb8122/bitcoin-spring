@@ -1,10 +1,3 @@
-# Bitcoin Spring (WIP)
-
-Bitcoin Spring is a small scalable service which allows client to subscribe to filtered streams of transactions or blocks.
-
-# Example
-
-```python
 from spring_pb2_grpc import SubscriberStub, grpc
 from spring_pb2 import Regex
 
@@ -18,4 +11,3 @@ regex = Regex(regex=".*")
 # Iterate over stream
 for matches in stub.Subscribe(regex):
     print(matches.matches)
-```
